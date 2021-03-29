@@ -1,7 +1,8 @@
+
 // task2
 console.log("Закерничний");
 
-// task6
+ // task6
 
 let myName = "Паша";
 let surname = "Закерничний" ;
@@ -25,7 +26,5 @@ console.log(typeof n);
 console.log(typeof value );
 console.log(typeof undefValue );
 console.log(typeof k );
-
-
 
 
