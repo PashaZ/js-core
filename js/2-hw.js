@@ -75,16 +75,16 @@ if (isNaN(firstSide)) {
     alert("Incorrect data")
 
 }
-let secondSide = prompt("Введіть другу сторону трикутника");
+let secondSide = +prompt("Введіть другу сторону трикутника");
 if (isNaN(secondSide)){
     alert("Incorrect data");
 }
-let thirdSide = prompt("Введіть третю сторону трикутника");
+let thirdSide = +prompt("Введіть третю сторону трикутника");
 if (isNaN(thirdSide)) {
     alert("Incorrect data");
 }
-// периметр
-let p =((firstSide*secondSide*thirdSide) / 2) ;
+// периметр/2
+let p =(firstSide + secondSide + thirdSide) / 2 ;
 let square = Math.sqrt(p * (p - firstSide) * (p - secondSide) * (p - thirdSide));
 console.log(square.toFixed(3)) ;
 
@@ -94,7 +94,7 @@ if (firstSide**2 == secondSide**2 + thirdSide**2)
     console.log("трикутник прямокутний") ;
 }
 else if
- (secondSide**2 == firstSide**2+thirdSide**2)
+ (secondSide**2 == firstSide**2 + thirdSide**2)
 {
     console.log("трикутник прямокутний") ;
 }
