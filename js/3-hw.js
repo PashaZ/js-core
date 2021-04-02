@@ -110,11 +110,14 @@ findUnique(arr);
 // task7
 
 let arr = [3, 4, 10, -5];
-let quantity = 3;
+let quantity = 2;
 let newLastElement;
 
-function lastElement(arr, quantity) {
+function lastElement(arr, quantity ) {
     newLastElement = arr.slice((-quantity));
+    if (quantity == undefined){
+        newLastElement = arr[arr.length-1] ;
+    }
     let result = newLastElement;
     console.log(`Last element ( ${result})`);
 }
