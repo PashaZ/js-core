@@ -1,4 +1,4 @@
-// task1
+task1
 
 function calcRectangleArea(width, height){
   if (Number(width) && Number(height)){
@@ -93,7 +93,7 @@ function showUsers(ids) {
   for (let i = 0; i < ids.length; i += 1) {
     try {
       showUser(ids[i]);
-      correct.push("id:" + ids[i]);
+      correct.push( ids[i]);
     }
     catch (error) {
       console.log(" ID must not be negetive: " + ids[i]);
