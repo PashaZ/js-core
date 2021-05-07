@@ -1,5 +1,5 @@
 
-// task1
+ // task1
 
 const http = require('http')
 const os = require('os');
@@ -18,23 +18,18 @@ http.createServer(function (request,response) {
 
 // task2
 
-let http = require('http');
-let os = require('os');
-let date = new Date();
+const http = require("http");
+const os = require('os');
+const personalmodule = require('./personalmodule.js');
 
-http.createServer(function (request,response) {
-    response.writeHead(200,{'Content-Type':'text/html'})
-    response.write('Date of request: '+ date)
-
+http.createServer(function (request, response) {
     let name = os.userInfo().username;
-    let currenthour = new Date().getHours();
-    
-    if      (5 < currenthour && currenthour < 11){response.write("<h5>Good morning, "+ name +"</h5>")}
-    else if (11 < currenthour && currenthour < 17){response.write("<h5>Good day, "+ name +"</h5>")}
-    else if (17 < currenthour && currenthour < 23){response.write("<h5>Good evening, "+ name +"</h5>")}
-    else(response.write("<h5>Good night, "+ name +"</h5>"));
-}).listen(8000, console.log("server is working"))
+    let date = new Date();
 
+    response.writeHead(200, { 'Content-Type': 'text/html' });
+    response.write("<p> Date of request: " + date + "</p>");
+    response.write("<p>" + personalmodule.greetUser(name, date) + "</p>");
+}).listen(8000, console.log("server is working"));
 
 
  
