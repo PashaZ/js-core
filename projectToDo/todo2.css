@@ -1,0 +1,31 @@
+  
+.delete-task-button{
+  font-weight: bold;
+  color:red;
+  padding:5px;
+  font-size: 22;
+}
+.delete-task-button:hover{
+  cursor: pointer;
+}
+.todo-list{
+  padding:0px;
+}
+
+.task{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0px;
+  width:540px;
+  font-size:16px;
+  cursor: pointer; 
+  border-radius: 20px;
+}
+.task:nth-child(odd) {
+  background-color: rgba(127, 127, 127, 0.1);
+}
+.task--completed{
+  text-decoration: line-through;
+  text-decoration-color:red;
+}
